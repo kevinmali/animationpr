@@ -1,3 +1,4 @@
+import 'package:animationpr/Model/detail.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -13,6 +14,7 @@ class Detils_Page extends StatefulWidget {
 class _Detils_PageState extends State<Detils_Page> {
   @override
   Widget build(BuildContext context) {
+    Details D2 = ModalRoute.of(context)!.settings.arguments as Details;
     return Scaffold(
         body: Stack(
       children: [
@@ -66,7 +68,8 @@ class _Detils_PageState extends State<Detils_Page> {
             Expanded(
                 child: Container(
               height: 100,
-            ))
+            )),
+            Text(D2.Name)
           ],
         ),
       ],

@@ -4,7 +4,7 @@
     "Detail" : "From the surface of Mercury, the Sun would appear more than three times as large as it does when viewed from Earth, and the sunlight would be as much as 11 times brighter.",
     "Type" : "Terrestrial",
     "Yers" : "88 Earth Day",
-    "Images" : "Asset/Images/Mercury.jpg"
+    "Images" : "Asset/image/1.png"
   },
   {
     "Name" : "Venus",
@@ -32,27 +32,27 @@
     "Detail" : "Jupiter is more than twice as massive than the other planets of our solar system combined. The giant planet's Great Red Spot is a centuries-old storm bigger than Earth.",
     "Type" : "Terrestrial",
     "Yers" : "4333 Earth Day",
-    "Images" : "Asset/Images/jupiter.jpg"
+    "Images" : "Asset/image/5.png"
   },
   {
     "Name" : "Saturn",
     "Detail" : "Adorned with a dazzling, complex system of icy rings, Saturn is unique in our solar system. The other giant planets have rings, but none are as spectacular as Saturn's.",
     "Type" : "Gas Giant",
     "Yers" : "10759 Earth Day",
-    "Images" : "Asset/Images/Saturn.jpg"
+    "Images" : "Asset/image/6.png"
   },
   {
     "Name" : "Uranus",
     "Detail" : "Uranus—seventh planet from the Sun—rotates at a nearly 90-degree angle from the plane of its orbit. This unique tilt makes Uranus appear to spin on its side.\n",
     "Type" : "Ice Giant",
     "Yers" : "30687",
-    "Images" : "Asset/Images/Uranus.jpg"
+    "Images" : "Asset/image/7.png"
   },
   {
     "Name" : "Neptune",
     "Detail" : "Neptune—the eighth and most distant major planet orbiting our Sun—is dark, cold and whipped by supersonic winds. It was the first planet located through mathematical calculations.\n",
     "Type" : "Ice Giant",
     "Yers" : "60190",
-    "Images" : "Asset/Images/Neptune.jpg"
+    "Images" : "Asset/image/8.png"
   }
 ]

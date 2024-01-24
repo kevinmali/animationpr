@@ -1,5 +1,9 @@
+import 'dart:developer';
+import 'dart:math';
+
 import 'package:animationpr/Model/detail.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 import '../../Provider/themprovider.dart';
@@ -11,65 +15,113 @@ class Detils_Page extends StatefulWidget {
   State<Detils_Page> createState() => _Detils_PageState();
 }
 
-class _Detils_PageState extends State<Detils_Page> {
+class _Detils_PageState extends State<Detils_Page>
+    with TickerProviderStateMixin {
+  late AnimationController controller;
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    controller = AnimationController(
+      vsync: this,
+      duration: Duration(seconds: 20),
+    )..repeat();
+  }
+
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
-    Details D2 = ModalRoute.of(context)!.settings.arguments as Details;
+    Details jdata = ModalRoute.of(context)!.settings.arguments as Details;
     return Scaffold(
         body: Stack(
       children: [
         Container(
-          height: MediaQuery.of(context).size.height / 1,
-          width: MediaQuery.of(context).size.width / 1,
+          height: MediaQuery.of(context).size.height / 0.5,
+          width: MediaQuery.of(context).size.width / 0.5,
           decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage(
-                    (Provider.of<themeprovider>(context, listen: true)
-                                .theme
-                                .isdark ==
-                            true)
-                        ? 'Asset/Images/background2.jpg'
-                        : 'Asset/Images/background1.jpg'),
-                fit: BoxFit.fill),
+              image: AssetImage(
+                  (Provider.of<themeprovider>(context, listen: true)
+                              .theme
+                              .isdark ==
+                          true)
+                      ? 'Asset/image/hasjhs.jpg'
+                      : 'Asset/image/detils.jpg'),
+              fit: BoxFit.cover,
+            ),
           ),
         ),
         Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            SizedBox(
-              height: 30,
-            ),
-            Expanded(
-              flex: 1,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Text(
-                    "Planets",
-                    style: TextStyle(fontSize: 25, color: Colors.white),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "Planets",
+                  style: TextStyle(fontSize: 25, color: Colors.white),
+                ),
+                IconButton(
+                  onPressed: () {
+                    Provider.of<themeprovider>(context, listen: false)
+                        .changetheme();
+                  },
+                  icon: Icon(
+                    (Provider.of<themeprovider>(context, listen: true)
+                                .theme
+                                .isdark ==
+                            false)
+                        ? Icons.sunny
+                        : Icons.brightness_4,
+                    color: Colors.white,
                   ),
-                  IconButton(
-                    onPressed: () {
-                      Provider.of<themeprovider>(context, listen: false)
-                          .changetheme();
-                    },
-                    icon: Icon(
-                      (Provider.of<themeprovider>(context, listen: true)
-                                  .theme
-                                  .isdark ==
-                              false)
-                          ? Icons.sunny
-                          : Icons.brightness_4,
-                      color: Colors.white,
-                    ),
-                  )
-                ],
+                )
+              ],
+            ),
+            Align(
+              alignment: Alignment.center,
+              child: Padding(
+                padding: const EdgeInsets.all(18),
+                child: Text(
+                  jdata.Detail,
+                  style: GoogleFonts.akshar(
+                      fontSize: 20, fontWeight: FontWeight.bold),
+                ),
               ),
             ),
-            Expanded(
-                child: Container(
-              height: 100,
-            )),
-            Text(D2.Name)
+            AnimatedBuilder(
+              animation: controller,
+              builder: (context, child) {
+                return Transform.rotate(
+                  angle: controller.value * 2 * pi,
+                  child: Container(
+                    height: 200,
+                    width: 200,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage(
+                          jdata.Images,
+                        ),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                );
+              },
+            ),
+            Text(
+              jdata.Name,
+              style: GoogleFonts.akshar(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 40),
+            ),
           ],
         ),
       ],

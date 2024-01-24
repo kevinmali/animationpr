@@ -1,12 +1,23 @@
 class Details {
   String Name;
-  String Detail;
-  String Images;
+  var Detail;
+  var Images;
+  var Yers;
+  var Type;
 
-  Details({required this.Name, required this.Detail, required this.Images});
+  Details(
+      {required this.Name,
+      required this.Detail,
+      required this.Images,
+      required this.Type,
+      required this.Yers});
 
   factory Details.fromjson({required Map data}) {
     return Details(
-        Name: data['Name'], Detail: data['Detail'], Images: data['Images']);
+        Name: data['Name'],
+        Detail: data['Detail'],
+        Images: data['Images'],
+        Type: data['type'],
+        Yers: data['Yers']);
   }
 }

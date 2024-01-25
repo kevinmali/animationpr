@@ -52,7 +52,7 @@ class _Detils_PageState extends State<Detils_Page>
                           true)
                       ? 'Asset/image/hasjhs.jpg'
                       : 'Asset/image/detils.jpg'),
-              fit: BoxFit.cover,
+              fit: BoxFit.fill,
             ),
           ),
         ),

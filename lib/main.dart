@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'Provider/themprovider.dart';
 import 'Views/Screens/Detils_page.dart';
 import 'Views/Screens/Home_Page.dart';
+import 'Views/Screens/splash_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,8 +29,9 @@ class MyApp extends StatelessWidget {
                   ? ThemeMode.dark
                   : ThemeMode.light,
           routes: {
-            '/': (ctx) => HomeScreen(),
-            'Detils': (ctx) => Detils_Page(),
+            '/': (ctx) => const Splash(),
+            'home': (ctx) => const HomeScreen(),
+            'Detils': (ctx) => const Detils_Page(),
           }),
     );
   }

@@ -78,9 +78,9 @@ Project Evaluation:
 - Quality of code and project structure
 - Presentation quality and clarity of communication
 
-<img src = "https://github.com/kevinmali/animationpr/assets/132121875/7ac48642-0a95-46e2-9f94-52a3ae877a25" width = "200px">
-<img src = "https://github.com/kevinmali/animationpr/assets/132121875/ca2ac1f9-ceaa-4e58-a441-34a545a28215" width = "200px">
-<img src = "https://github.com/kevinmali/animationpr/assets/132121875/e319dea9-b840-4b7d-a18c-2bf9c43c397c" width = "200px">
+<img src = "https://github.com/kevinmali/animationpr/assets/132121875/3ac07c55-0808-4b8c-aa75-eb83230a2b70" width = "200px">
+<img src = "https://github.com/kevinmali/animationpr/assets/132121875/acf5b756-1c57-4b2c-bfb6-f730d41e1298" width = "200px">
+<img src = "https://github.com/kevinmali/animationpr/assets/132121875/a99541f7-56a5-4a71-8ea8-85400bf0185d" width = "200px">
 <img src = "https://github.com/kevinmali/animationpr/assets/132121875/c15bb7e8-aacc-458c-8680-603ee7762711" width = "200px">
 <img src = "https://github.com/kevinmali/animationpr/assets/132121875/69015cfe-e285-45d2-be30-27b17af702c7" width = "200px">
 <img src = "https://github.com/kevinmali/animationpr/assets/132121875/a7c479b9-0a1c-4997-8181-3dc5dc8de86a" width = "200px">
